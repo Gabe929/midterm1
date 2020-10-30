@@ -13,7 +13,22 @@ using namespace std;
 
 int main()
 {
-    printf("Hello World");
-
-    return 0;
+    read input file
+    calls classes 
 }
+
+Class 1: NameofApps
+    +getNAme
+    +getCategory
+    +setName
+    +setCategory
+    +NameofApps()
+    +PrintInfo()
+    -name: string
+    -category: string
+Class 2: Rating/algos
+    +Rating()
+    +
+    +SomeTypeofSortingAlgorithm: function
+    -
+    -Rating: int
