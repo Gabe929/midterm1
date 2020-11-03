@@ -1,7 +1,7 @@
 /******************************************************************************
 For this program the user enters data about the app in the Google PLay Store. 
-We run that data against November 2, 2020 list of top 300 apps and see if it is on the list.
-If it is in the top 300 the program prints the app's information and the ranking it holds.
+We run that data against November 2, 2020 list of top 500 apps and see if it is on the list.
+If it is in the top 500 the program prints the app's information and the ranking it holds.
 *******************************************************************************/
 #include "Apps.h"
 #include "RankingApp.h"
