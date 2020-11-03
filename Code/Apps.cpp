@@ -1,38 +1,40 @@
 #include "Apps.h"
 #include <iostream>
 #include <string>
+#include <cctype>
+#include <algorithm>
 using namespace std;
 
-Apps::Apps(){
+Apps::Apps(){   // Sets the default values for the private values in the Apps class
     name = "None";
     category = "None";
     rating = 0;
     installs = 0;
 }
 
-Apps::Apps(string name, string category, double rating, int installs){
+Apps::Apps(string name, string category, double rating, float installs){ // Sets the values for the private values in the Apps class
     this->name = name;
     this->category = category;
     this->rating = rating;
     this-> installs = installs;
 }
-string Apps::GetName(string name) const{
+string Apps::GetName() const{   // Each of these are to call for the value of each variable, which is used in RankingApp.cpp
     return name;
 }
         
-string Apps::GetCategory(string category) const{
+string Apps::GetCategory() const{
     return category;
 } 
         
-double Apps::GetRating(double rating) const{
+double Apps::GetRating() const{
     return rating;
 }
         
-int Apps::GetInstalls(int installs) const{
+float Apps::GetInstalls() const{
     return installs;
 }
 
-void Apps::PrintInfo() const {
+void Apps::PrintInfo() const {  //Prints the values of the app
     cout << "App Info\nApp Name: " << name << "\nCategory: " << category << "\nRating: "; 
-    cout << rating << "\nNumber of Installs: " << installs;
+    cout << rating << "\nNumber of Installs: " << installs << endl;
 }

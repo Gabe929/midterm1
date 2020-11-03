@@ -1,12 +1,13 @@
 /******************************************************************************
-Welcome to GDB Online.
-GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
-C#, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
-Code, Compile, Run and Debug online from anywhere in world.
+For this program the user enters data about the app in the Google PLay Store. 
+We run that data against November 2, 2020 list of top 300 apps and see if it is on the list.
+If it is in the top 300 the program prints the app's information and the ranking it holds.
 *******************************************************************************/
 #include "Apps.h"
+#include "RankingApp.h"
 #include <iostream>
 #include <string>
+#include <algorithm>
 using namespace std;
 
 
@@ -14,11 +15,11 @@ int main(int argc, const char* argv[])
 {
     string userName, userCategory;
     double userRating;
-    int userInstalls;
+    float userInstalls;
     
     cout << "Please enter the name of the app" << endl;
     getline(cin, userName);
-    cout <<"Enter the category this app is labeled under" << endl;
+    cout <<"Enter the category this app is labeled under (Please enter in lowercase)" << endl;
     getline(cin, userCategory);
     cout <<"Enter the app's rating" << endl;
     cin >> userRating;
@@ -26,6 +27,12 @@ int main(int argc, const char* argv[])
     cin >> userInstalls;
     cout << "\n";
     
+    // Here the program collects data on the app and sends it to the Apps Class
+    
     Apps userApp = Apps(userName, userCategory, userRating, userInstalls);
+    
+    RankingApp newRankingApp = RankingApp(userApp);
+    
+    newRankingApp.PrintInfo();
     
 }

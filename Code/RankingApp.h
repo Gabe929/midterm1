@@ -7,16 +7,13 @@ using namespace std;
 
 class RankingApp{
     public:
-        RankingApp();
         
-        RankingApp(Apps app);
-        /******************************************************************************
-        Here we figure out some sort of sorting alogrithm to come up for the 
-        ranking of the app.
-        *******************************************************************************/
+        RankingApp(Apps app); // Sets the prev
+        
         Apps GetApp() const;
+        
+        void PrintInfo() const; // Reads the mytext.txt file and prints the correct ranking for the app
     private:
-    int ranking;
     Apps app;
 };
 #endif
