@@ -14,7 +14,7 @@ int main(int argc, const char* argv[])
 {
     string userName, userCategory;
     double userRating;
-    float userInstalls;
+    long long userInstalls;
     
     cout << "Please enter the name of the app" << endl;
     getline(cin, userName);

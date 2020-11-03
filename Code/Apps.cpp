@@ -10,7 +10,7 @@ Apps::Apps(){   // Sets the default values for the private values in the Apps cl
     installs = 0;
 }
 
-Apps::Apps(string name, string category, double rating, float installs){ // Sets the values for the private values in the Apps class
+Apps::Apps(string name, string category, double rating, long long installs){ // Sets the values for the private values in the Apps class
     this->name = name;
     this->category = category;
     this->rating = rating;
@@ -28,7 +28,7 @@ double Apps::GetRating() const{
     return rating;
 }
         
-float Apps::GetInstalls() const{
+long long Apps::GetInstalls() const{
     return installs;
 }
 

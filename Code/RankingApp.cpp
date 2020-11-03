@@ -29,7 +29,7 @@ void RankingApp::PrintInfo() const {
     int temp;
     string category;
     double rating;
-    float installs;
+    long long installs;
     
     ifstream file("mytext.txt");
     if(file.is_open()){
@@ -42,15 +42,16 @@ void RankingApp::PrintInfo() const {
           rating = stod(line);
         }
         if (getline(file, line)){
-          installs = stof(line);
+          installs = stoll(line);
         }
         
-        if(app.GetCategory() == category){
-            if(app.GetRating() == rating){
-                if(app.GetInstalls() == installs){
-                    rank = temp;
-                    file.close();
+        if(app.GetRating() == rating){
+            if(app.GetInstalls() == installs){
+                if(app.GetCategory().compare(0, category.size(), category) == 0){
+                        rank = temp;
+                        file.close();
                 }
+                
             }
         }
       }  
@@ -58,6 +59,11 @@ void RankingApp::PrintInfo() const {
     else{
         cout << "File is not open." << endl;
     }
-    app.PrintInfo();
-    cout << "The ranking of this app in the Google Play Store is " << rank;
+    if (0 < rank && rank <= 500){
+        app.PrintInfo();
+        cout << "The ranking of this app in the Google Play Store is " << rank;
+    }
+    else {
+        cout << "This app is not within the top 500." << endl;
+    }
 }
