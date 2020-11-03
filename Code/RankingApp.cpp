@@ -17,7 +17,7 @@ Apps RankingApp::GetApp() const{
 
 /******************************************************************************
 This function proved to be the most difficult part of the project. In order to find the ranking of 
-the app I had to create and upload a list of the current top 300 apps and have the RankingApp 
+the app I had to create and upload a list of the current top 500 apps and have the RankingApp 
 class open the file, use delimiters to seperate the variables and compare them to the apps data.
 It continues down the mytext.txt list until findind the one that matches in which it takes the 
 rank and prints it. 
