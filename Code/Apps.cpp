@@ -1,8 +1,6 @@
 #include "Apps.h"
 #include <iostream>
 #include <string>
-#include <cctype>
-#include <algorithm>
 using namespace std;
 
 Apps::Apps(){   // Sets the default values for the private values in the Apps class

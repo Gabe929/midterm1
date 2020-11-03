@@ -7,7 +7,6 @@ If it is in the top 300 the program prints the app's information and the ranking
 #include "RankingApp.h"
 #include <iostream>
 #include <string>
-#include <algorithm>
 using namespace std;
 
 
