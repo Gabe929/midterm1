@@ -1,0 +1,6 @@
+The goal of our program is to predict the rating of any app using the category it is based on and the use of the app in that category. 
+In order to accomplish this, we defined classes Apps and RankingApp and made header files for both classes. 
+The Apps class takes the name and rating of the app, the category it comes from, and the number of downloads and returns the info for the RankingApp class. 
+The RankingApp class then uses this info to see if the app is in the top 500 ranking of the Google Play Store and returns the ranking number.
+
+Gabriel made the outline for the project and worked on most of the code and Oscar worked on the code and the pseudocode for the project.
